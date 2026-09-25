@@ -9,8 +9,8 @@ forecasting quietly falls apart.
 
 | # | Post | Notebook | Status |
 |---|------|----------|--------|
-| 1 | *Your Model's MSE Is Lying to You* — why MSE can't express uncertainty, and the Gaussian NLL that fixes it | [`01-point-vs-probabilistic/`](01-point-vs-probabilistic/) | ✅ published |
-| 2 | Multi-step rollout — stochastic trajectories, Monte Carlo bands, and whether they stay calibrated | — | 🚧 in progress |
+| 1 | [*Your Model's MSE Is Lying to You*](https://towardsdatascience.com/your-models-mse-is-lying-to-you/) — why MSE can't express uncertainty, and the Gaussian NLL that fixes it | [`01-point-vs-probabilistic/`](01-point-vs-probabilistic/) | ✅ published |
+| 2 | [*Your Model's MSE Is Lying to You — Part II*](https://towardsdatascience.com/your-models-mse-is-lying-to-you-part-ii/) — autoregressive rollout, stochastic trajectories, and whether the bands stay calibrated | [`02-probabilistic-autoregressive-forecasting/`](02-probabilistic-autoregressive-forecasting/) | ✅ published |
 
 
 ## What's here

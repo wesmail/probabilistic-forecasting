@@ -27,4 +27,4 @@ Runs on CPU in a few minutes. Seeds are fixed; the last-decimal figures may shif
 
 ## Read the post
 
-*(Article link added on publication.)*
+[Your Model's MSE Is Lying to You](https://towardsdatascience.com/your-models-mse-is-lying-to-you/)
