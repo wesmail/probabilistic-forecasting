@@ -1,21 +1,17 @@
 # Probabilistic Forecasting for Physical Signals
 
-Code and notebooks accompanying a series on probabilistic forecasting, moving from single-number point predictions to models that report calibrated, input-dependent uncertainty, and checking whether that uncertainty can actually be trusted.
+Code and notebooks accompanying a series on probabilistic forecasting, moving from single-number point predictions to models that report calibrated, input-dependent uncertainty and, when a single Gaussian is not enough, to diffusion heads that can express multimodal futures.
 
-The running example throughout is a synthetic physical signal with **heteroscedastic noise** (a noise level that varies over time), which is where ordinary point
-forecasting quietly falls apart.
+The early posts use a synthetic signal with **heteroscedastic noise** (a noise level that varies over time). [Part III](https://towardsdatascience.com/your-models-mse-is-lying-to-you-iii-time-series-diffusion/) switches to a **double-well** signal, where the next value can sit in either of two modes and a Gaussian head is forced to put its peak where the truth has a dip.
 
 ## Posts in the series
 
 | # | Post | Notebook | Status |
 |---|------|----------|--------|
-| 1 | [*Your Model's MSE Is Lying to You*](https://towardsdatascience.com/your-models-mse-is-lying-to-you/) — why MSE can't express uncertainty, and the Gaussian NLL that fixes it | [`01-point-vs-probabilistic/`](01-point-vs-probabilistic/) | ✅ published |
-| 2 | [*Your Model's MSE Is Lying to You — Part II*](https://towardsdatascience.com/your-models-mse-is-lying-to-you-part-ii/) — autoregressive rollout, stochastic trajectories, and whether the bands stay calibrated | [`02-probabilistic-autoregressive-forecasting/`](02-probabilistic-autoregressive-forecasting/) | ✅ published |
+| 1 | [*Your Model's MSE Is Lying to You*](https://towardsdatascience.com/your-models-mse-is-lying-to-you/): why MSE can't express uncertainty, and the Gaussian NLL that fixes it | [`01-point-vs-probabilistic/`](01-point-vs-probabilistic/) | ✅ published |
+| 2 | [*Your Model's MSE Is Lying to You: II*](https://towardsdatascience.com/your-models-mse-is-lying-to-you-part-ii/): autoregressive rollout, stochastic trajectories, and whether the bands stay calibrated | [`02-probabilistic-autoregressive-forecasting/`](02-probabilistic-autoregressive-forecasting/) | ✅ published |
+| 3 | [*Your Model's MSE Is Lying to You III*](https://towardsdatascience.com/your-models-mse-is-lying-to-you-iii-time-series-diffusion/): when a Gaussian head has the wrong shape, and a diffusion head that can express any shape | [`03-time-series-diffusion/`](03-time-series-diffusion/) | ✅ published |
 
-
-## What's here
-
-Each post has its own folder with a self-contained notebook and a short README. Code shared across posts (the transformer backbone, the signal generator, the training and calibration helpers) lives in [`shared/`](shared/) once more than one post needs it.
 
 ## Running the notebooks
 
@@ -26,8 +22,7 @@ pip install -r requirements.txt
 jupyter lab
 ```
 
-Each notebook runs top to bottom on CPU in a few minutes. Random seeds are fixed for reproducibility, though exact figures in the last decimal place can vary across
-platforms and library versions.
+Each notebook runs top to bottom on CPU. Parts 1 and 2 finish in a few minutes; Part 3's diffusion rollout is the slowest cell (about one to two minutes). Random seeds are fixed for reproducibility, though exact figures in the last decimal place can vary across platforms and library versions.
 
 ## Requirements
 

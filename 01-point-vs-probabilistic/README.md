@@ -8,7 +8,7 @@ Two transformers with an **identical backbone** are trained on the same syntheti
 
 - A synthetic signal whose **noise level varies over time** (heteroscedastic).
 - The same backbone with two heads: a point head (one number) and a Gaussian head (`μ` and `log σ`).
-- **Near-identical test MSE** for both models — they look interchangeable on point accuracy alone.
+- **Near-identical test MSE** for both models, they look interchangeable on point accuracy alone.
 - **Calibration by regime:** split the test set into quiet and noisy halves and check whether a nominal 90% interval actually covers 90%. The point model's fixed band over-covers when the signal is calm and badly under-covers when it's noisy; the probabilistic model's adaptive band stays far closer in both.
 - A **threshold-exceedance** example: the point model can only say yes/no, while the probabilistic model returns an actual probability.
 
